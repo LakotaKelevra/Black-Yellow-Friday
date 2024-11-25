@@ -1,2 +1,4 @@
 @import 'bootstrap';
 @import './style.css';
+@import './masthead.css';
+@import 'aos/dist/aos.css';

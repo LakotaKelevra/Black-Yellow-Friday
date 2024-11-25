@@ -1,8 +1,22 @@
-.masthead {
-    height: 100vh;
-    min-height: 500px;
-    background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+:root{
+    --main: white;
+    --sec: black;
+    --acc: #feed00;
+}
+
+body{
+  font-family: "Space Grotesk", sans-serif;
+}
+
+h1, h2{
+  font-family: "Black Ops One", system-ui;
+}
+
+ 
+.bg-sec {
+  background-color: var(--sec);
+}
+
+.bg-yellow {
+    background-color: var(--acc);
   }
