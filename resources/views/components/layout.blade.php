@@ -12,6 +12,12 @@
 </head>
 <body>
     <x-navbar/>
-    {{$slot}}
+    <main class="vh-100">
+        {{$slot}}
+
+    </main>
+
+        <x-footer/>
+
 </body>
 </html>

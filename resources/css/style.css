@@ -12,6 +12,10 @@ h1, h2{
   font-family: "Black Ops One", system-ui;
 }
 
+main{
+  margin-top: 100px;
+}
+
  
 .bg-sec {
   background-color: var(--sec);
@@ -19,4 +23,23 @@ h1, h2{
 
 .bg-yellow {
     background-color: var(--acc);
+  }
+
+
+  /* .auth-form {
+
+  } */
+
+  .btn-yellow {
+    background-color: var(--acc);
+  }
+
+  .btn-yellow:hover {
+    background-color: var(--sec);
+    color: var(--acc);
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--acc);
   }
