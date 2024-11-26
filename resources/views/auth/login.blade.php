@@ -12,7 +12,7 @@
                         <input type="password" class="form-control" id="Password" placeholder="Password" name="password">
                         <label for="floatingPassword">Password</label>
                     </div>
-                    <button type="submit" class="btn btn-yellow mb-3">Registrati</button>
+                    <button type="submit" class="btn btn-yellow mb-3">Accedi</button>
                 </form>
                 <p class="text-center">Non hai un account? <a href="{{route('register')}}">Registrati</a></p>
             </div>

@@ -6,19 +6,19 @@
                     @csrf                   
                     <div class="form-floating mb-3">
                         <input type="name" class="form-control" id="name" placeholder="Il tuo nome" name="name" value="{{old('name')}}">
-                        <label for="floatingInput">Email address</label>
+                        <label for="name">Nome</label>
                     </div>                   
                     <div class="form-floating mb-3">
                         <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email" value="{{old('email')}}">
-                        <label for="floatingInput">Email address</label>
+                        <label for="email">Email address</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="password" class="form-control" id="Password" placeholder="Password" name="password">
-                        <label for="floatingPassword">Password</label>
+                        <label for="Password">Password</label>
                     </div>
                     <div class="form-floating">
                         <input type="password" class="form-control" id="password_confirmation" placeholder="Conferma Password" name="password_confirmation">
-                        <label for="floatingPassword">Password</label>
+                        <label for="password_confirmation">Conferma Password</label>
                     </div>
                     <button type="submit" class="btn btn-yellow mb-3">Registrati</button>
                 </form>

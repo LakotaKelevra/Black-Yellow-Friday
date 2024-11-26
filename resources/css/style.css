@@ -10,6 +10,7 @@ body{
 
 h1, h2{
   font-family: "Black Ops One", system-ui;
+  color: var(--acc);
 }
 
 main{
@@ -42,4 +43,8 @@ main{
   a {
     text-decoration: none;
     color: var(--acc);
+  }
+
+  .card{
+    min-height: 300px;
   }

@@ -2,18 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\cr;
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 
-class ProductController extends Controller
+use App\Models\Product;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Routing\Controllers\Middleware;
+use Illuminate\Routing\Controllers\HasMiddleware;
+
+class ProductController extends Controller implements HasMiddleware
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public static function middleware(){
+        return[new Middleware('auth', except: ['index', 'show'])];
+            }
+
+     public function index()
     {
-        //
+        $products = Product::all();
+        return view('product.index', compact('products'));
     }
 
     /**
@@ -21,7 +30,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('product.create');
     }
 
     /**
@@ -29,21 +38,48 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'price' => 'required',
+            'stock' => 'required',
+            'discount' => 'required',
+            'image' => 'required',
+            
+        ]);
+    // dd($request->all());
+        $final_price = $request->price - ($request->price * $request->discount / 100);
+        $product= Product::create([
+            'name' => $request->name,
+            'description' => $request->description,
+            'price' => $request->price,
+            'stock' => $request->stock,
+            'discount' => $request->discount,  
+            
+            'image' => $request->file('image')->store('/products'),
+            
+            'user_id' => Auth::user()->id,
+            'final_price' => $final_price,
+            
+        ]);
+        // dd($final_price);
+
+        return redirect(route('product.create'))->with('success', 'Prodotto creato con successo');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(cr $cr)
+    public function show(product $product)
     {
-        //
+        return view('product.show', compact('product'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(cr $cr)
+    public function edit(product $product)
     {
         //
     }
@@ -51,7 +87,7 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, cr $cr)
+    public function update(Request $request, product $product)
     {
         //
     }
@@ -59,7 +95,7 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(cr $cr)
+    public function destroy(product $product)
     {
         //
     }
