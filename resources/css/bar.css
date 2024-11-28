@@ -1,0 +1,32 @@
+footer{
+    background-color: var(--sec);
+    color: var(--acc);
+}
+
+.yellow-bottom{
+    border-bottom: 1px solid var(--acc);
+}
+
+.nav-link:hover, .navbar-brand:hover{
+    color: var(--acc);
+}
+
+.active{
+    font-weight: semibold;
+    font-family: "Black Ops One", system-ui;
+
+}
+
+nav> .shadow{
+    box-shadow: var(--acc) !important;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: var(--acc);
+}

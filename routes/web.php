@@ -16,3 +16,5 @@ Route::get('/product/{product}', [ProductController::class, 'show'])->name('prod
 
 Route::get('/review/create/{product}', [ReviewController::class, 'create'])->name('review.create');
 Route::post('/review/store', [ReviewController::class, 'store'])->name('review.store');
+
+Route::get('user/{user}', [PublicController::class, 'user'])->name('user.show');
