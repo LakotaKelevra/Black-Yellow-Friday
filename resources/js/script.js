@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-var countDownDate = new Date("Nov 29, 2024 23:59:59").getTime();
+var countDownDate = new Date("Nov 29, 2024 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -30,14 +30,19 @@ var x = setInterval(function() {
 
   // Display the result in the element with id="demo"
   // document.getElementById("counter").innerHTML = days + " : " + hours + " : " + minutes + " : " + seconds;
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  document.getElementById("seconds").innerHTML = seconds;
-
+  
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "00 : 00 : 00 : 00";
+    document.getElementById("days").innerHTML = "00";
+    document.getElementById("hours").innerHTML = "00";
+    document.getElementById("minutes").innerHTML = "00";
+    document.getElementById("seconds").innerHTML = "00";
+  } else{
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
   }
 }, 1000);

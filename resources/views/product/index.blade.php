@@ -5,7 +5,7 @@
                 <h1>Tutte le offerte!</h1>
             </div>
             @foreach ($products as $item)
-                <div class="col-12 col-md-4">
+                <div class="col-6 col-md-3">
                     <x-product-card :item="$item"/>
                 </div>
             @endforeach

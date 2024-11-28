@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\User;
+use App\Models\Review;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -73,7 +75,14 @@ class ProductController extends Controller implements HasMiddleware
      */
     public function show(product $product)
     {
-        return view('product.show', compact('product'));
+        $reviews = $product->reviews()->get(); 
+        // $users = []; 
+        // foreach ($reviews as $review) {
+        //     array_push($users, $review->user_id);
+        // }
+        // @dd($users);   
+        $users = User::select('id', 'name')->whereIn('id', $reviews->pluck('user_id'))->get();
+        return view('product.show', compact('product', 'reviews'));
     }
 
     /**
