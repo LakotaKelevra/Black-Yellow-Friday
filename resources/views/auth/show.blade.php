@@ -1,5 +1,5 @@
 <x-dashboard>
-    <div class="container mb-5">
+    <div class="container mb-5 margin-nav">
         <div class="row text-center align-items-center justify-content-center">
             <div class="col-12" class="d-flex ">
                 <h2>

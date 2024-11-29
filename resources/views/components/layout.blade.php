@@ -14,9 +14,10 @@
 </head>
 <body>
     <x-navbar/>
-    <main class="min-vh-100">
-       <x-flash/>
-        {{$slot}}
+    <main class="min-vh-100 margin-nav">     
+            <x-flash/>
+             {{$slot}}
+
 
     </main>
 

@@ -20,7 +20,14 @@ h3, h4{
 }
 
 main{
-  margin-top: 80px;
+  /* background-image: linear-gradient(0deg, rgba(254,237,0,1) 0%, rgba(0,0,0,0.7) 100%), url('../../public/Background/360_F_242196688_e2a8ysUHFL6cfBlFk2kCf3OlhHKK9tce.jpg'); */
+  background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(254,237,0,0.49352240896358546) 26%, rgba(254,237,0,0) 50%, rgba(254,237,0,0.510329131652661) 73%, rgba(0,0,0,1) 100%);
+  background-size: cover;
+  padding-bottom: 20px;
+}
+
+.margin-nav{
+  padding-top: 80px;
 }
 
  

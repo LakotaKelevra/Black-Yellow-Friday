@@ -1,7 +1,7 @@
 .masthead {
     height: 70vh;
     min-height: 500px;
-
+    transform: translateY(-5%);
     background-color: var(--acc);
     background-size: cover;
     background-position: center;
@@ -39,7 +39,7 @@
 
   #textSlide{
     animation: textSlide 1s ease-in-out;
-
+   
   }
 
   @keyframes slide{
@@ -63,4 +63,10 @@
       transform: translateX(0%);
       opacity: 100%;
   }
+  }
+
+  @media (min-width: 768px) {
+    #textSlide{
+      margin-left: 20%;
+    }
   }
