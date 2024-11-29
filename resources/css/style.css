@@ -32,11 +32,6 @@ main{
     background-color: var(--acc);
   }
 
-
-  /* .auth-form {
-
-  } */
-
   .btn-yellow {
     background-color: var(--acc);
   }
@@ -51,11 +46,50 @@ main{
     color: var(--acc);
   }
 
-  .product-card{
-    min-height: 300px;
-  }
+  /* .product-card-body{
+    min-height: 200px;
+  } */
 
   .card-img-top{
     height: 180px;
+    border-radius: 15px 15px 0 0;
     /* width: 100%; */
   }
+
+  .card-body, .card {
+    border: none;
+  }
+
+  .review-card{
+  background-color: var(--sec); 
+  color: var(--main);
+  border: var(--acc) 3px solid;
+  border-radius: 15px;
+}
+
+.product-card{
+  border: var(--sec) 3px solid;
+  border-radius: 15px;
+}
+
+.dashboard-layout{
+  background-color: var(--sec);
+  color: var(--acc);
+  margin-top: -100px;
+}
+
+.dashboard-layout> .main{
+  margin-top: 300px;
+}
+
+.bi-star-fill{
+  color: var(--acc);
+}
+
+.bi-star{
+  color: var(--acc);
+}
+
+.text-cart> a{
+  color: var(--sec);
+}

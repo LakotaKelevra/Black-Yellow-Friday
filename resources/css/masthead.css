@@ -1,7 +1,7 @@
 .masthead {
     height: 70vh;
     min-height: 500px;
-    /* background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080'); */
+
     background-color: var(--acc);
     background-size: cover;
     background-position: center;
@@ -9,14 +9,30 @@
   } 
 
   .counter{
-    background-color: var(--sec);
+    /* background-color: var(--sec); */
     color: var(--acc);
+    /* text-shadow: 4px 4px var(--sec); */
     border-radius: 15PX;
+    background-image: url('../../public/Background/360_F_242196688_e2a8ysUHFL6cfBlFk2kCf3OlhHKK9tce.jpg');
+    /* background-size: cover; */
+    background-position: center;
+  
   }
 
-
+  .counter > h2{
+    text-shadow: 4px 4px var(--sec);
+  }
+  
+  
   #title-col{
+    /* background-image: url('../../public/Background/black-and-yellow-abstract-grunge-texture-with-halftone-background-free-vector.jpg'); */
+    background-color: black !important;
+    background-image: url('../../public/Background/360_F_242196688_e2a8ysUHFL6cfBlFk2kCf3OlhHKK9tce.jpg');
+    background-size: cover;
+    background-position: center;
     /* transform: rotate(20deg); */
     /* margin-top: 50px; */
     color: var(--acc);
+    text-shadow: 4px 4px var(--sec);
+  
   }

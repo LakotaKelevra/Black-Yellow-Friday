@@ -55,4 +55,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Review::class);
     }
+
+    public function buyer(){
+        return $this->hasOne(Buyer::class);
+    }
+
+    
 }

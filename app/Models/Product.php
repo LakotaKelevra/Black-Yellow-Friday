@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\User;
+use App\Models\Buyer;
 use App\Models\Review;
 use Illuminate\Database\Eloquent\Model;
 
@@ -26,5 +28,11 @@ class Product extends Model
     public function reviews(){
         return $this->hasMany(Review::class);
     }
+
+    public function buyers(){
+        return $this->belongsToMany(Buyer::class);
+    }
+
+  
 
 }

@@ -1,16 +1,11 @@
-// Set the date we're counting down to
-var countDownDate = new Date("Nov 29, 2024 00:00:00").getTime();
+let reviewRates = document.querySelectorAll(".review-rate");
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+let countDownDate = new Date("Nov 29, 2024 00:00:00").getTime();
 
-  // Get today's date and time
+let x = setInterval(function() {
   var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
   var distance = countDownDate - now;
 
-  // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24)).toLocaleString('en-US', {
     minimumIntegerDigits: 2,
     useGrouping: false
@@ -28,10 +23,7 @@ var x = setInterval(function() {
     useGrouping: false
   });
 
-  // Display the result in the element with id="demo"
-  // document.getElementById("counter").innerHTML = days + " : " + hours + " : " + minutes + " : " + seconds;
   
-  // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("days").innerHTML = "00";
@@ -46,3 +38,54 @@ var x = setInterval(function() {
 
   }
 }, 1000);
+
+function salutoInOrario() {
+  const ora = new Date().getHours();
+  let saluto;
+
+  if (ora >= 5 && ora < 12) {
+      saluto = "Buongiorno,";
+  } else if (ora >= 12 && ora < 18) {
+      saluto = "Buon pomeriggio,";
+  } else if (ora >= 18 && ora < 22) {
+      saluto = "Buona sera,";
+  } else {
+      saluto = "Buona notte,";
+  }
+
+  return saluto;
+}
+
+document.getElementById("saluto").innerText = salutoInOrario();
+
+ function reviewRate(){
+  
+  reviewRates.forEach((reviewRate) => {
+    let rating = parseInt(reviewRate.getAttribute("value"));
+
+    let stars;
+    switch (rating) {
+        case 1:
+            stars = `<i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`;
+            break;
+        case 2:
+            stars = `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`;
+            break;
+        case 3:
+            stars = `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`;
+            break;
+        case 4:
+            stars = `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>`;
+            break;
+        case 5:
+            stars = `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>`;
+            break;
+        default:
+            stars = `<i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`; 
+    }
+    reviewRate.innerHTML = stars;
+});
+}
+
+reviewRate();
+

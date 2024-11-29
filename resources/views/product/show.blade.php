@@ -1,17 +1,25 @@
 <x-layout>
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <h1 class="text-center my-4">{{$product->name}}</h1>
+            <h1 class="text-center my-4">{{$product->name}}</h1>
+            <div class="col-6 p-3 my-3">
                 <img src="{{Storage::url($product->image)}}" alt="{{$product->name}}" class="img-fluid">
-                <div class="border border-2 border-dark rounded-2 p-3 my-3">
+            </div>
+                <div class=" col-6 border border-2 border-dark rounded-2 p-3 my-3">
                     <h3 class="lead mb-3">{{$product->name}}</h3>
                     <p class="mb-5">{{$product->description}}</p>
                     <h5 class="text-decoration-line-through text-end">€{{$product->price}}</h5>
                     <h2 class="fw-bold text-end">€{{$product->final_price}}</h2>
                 </div>
-                <button class="btn btn-yellow ms-auto d-flex">Acquista</button>
-            </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <form action="{{route('buy', compact('product'))}}" method="post">
+                        @csrf
+                        <input type="hidden" name="quantity" value="1">
+                            <button class="btn btn-yellow w-25">Aggiungi al carrello</button>
+                        </form>
+                    </div>
+                </div>
         </div>
         <div class="row  my-5">
             <div class="col-12 text-end">

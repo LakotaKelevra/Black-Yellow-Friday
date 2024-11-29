@@ -20,10 +20,16 @@
             <a class="nav-link {{ Route::currentRouteName() == 'login' ? 'active' : '' }}" href="{{route('login')}}">Login</a>   
             @endguest
             @auth
-            <li class="nav-item">
-              <a class="nav-link {{ Route::currentRouteName() == 'product.create' ? 'active' : '' }}" href="{{route('product.create')}}">Crea Offerta</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Ciao {{Auth::user()->name}}
+              </a>
+              <ul class="dropdown-menu mx-2">
+                <li><a class="dropdown-item {{ Route::currentRouteName() == 'product.create' ? 'active' : '' }}" href="{{route('product.create')}}" >Crea offerta</a></li>
+                <li><a class="dropdown-item {{ Route::currentRouteName() == 'dashboard' ? 'active' : '' }}" href="{{route('dashboard')}}">Dashboard</a></li>
+                <form action="{{route('logout')}}" method="POST"> @csrf <button type="submit" class="dropdown-item">Logout</button></form>
+              </ul>
             </li>
-            <form action="{{route('logout')}}" method="POST"> @csrf <button type="submit" class="nav-link">Logout</button></form>
             @endauth
           </li>
         </ul>

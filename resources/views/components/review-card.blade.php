@@ -1,5 +1,5 @@
 <div class="card">
-    <div class="card-body">
+    <div class="card-body review-card">
       <h5 class="card-title">
         @switch($review->rating)
             @case($review->rating == 1)
@@ -23,7 +23,7 @@
       </h5>
       <h6 class="card-subtitle mb-2 text-body-secondary">
         
-                {{$review->author}}
+                <a href="{{route('user.show', ['user' => $review->user])}}">{{$review->author}}</a>
         
       </h6>
       <p class="card-text">{{$review->comment}}</p>

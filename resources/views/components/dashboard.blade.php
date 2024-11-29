@@ -12,10 +12,9 @@
 {{-- VITE --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
+<body class="dashboard-layout">
     <x-navbar/>
-    <main class="min-vh-100">
-       <x-flash/>
+    <main class="min-vh-100 ">
         {{$slot}}
 
     </main>

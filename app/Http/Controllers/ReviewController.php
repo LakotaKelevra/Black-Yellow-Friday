@@ -13,7 +13,11 @@ class ReviewController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+
+
+     
+
+            public function index()
     {
         //
     }
@@ -81,6 +85,9 @@ class ReviewController extends Controller
      */
     public function destroy(Review $review)
     {
+        // @dd($review);
+        $review->delete();
+        return redirect()->back()->with('success', 'Recensione rimossa con successo');
         //
     }
 }

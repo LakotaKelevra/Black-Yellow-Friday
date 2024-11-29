@@ -75,7 +75,7 @@ class ProductController extends Controller implements HasMiddleware
      */
     public function show(product $product)
     {
-        $reviews = $product->reviews()->get(); 
+        $reviews = $product->reviews()->orderBy('rating', 'desc')->get(); 
         // $users = []; 
         // foreach ($reviews as $review) {
         //     array_push($users, $review->user_id);

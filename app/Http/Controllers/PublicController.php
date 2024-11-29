@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Review;
 use App\Models\Product;
 use GuzzleHttp\Middleware;
@@ -21,8 +22,9 @@ class PublicController extends Controller
 
     public function user($id)
     {
+        $username = User::find($id)->name;
         $reviews = Review::where('user_id', $id)->get();
-        return view('user.show', compact('id'));
+        return view('user.show', compact('id', 'reviews', 'username'));
     }
     
 }
