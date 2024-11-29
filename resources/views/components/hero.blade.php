@@ -1,8 +1,10 @@
 <header class="masthead">
     <div class="container-fluid h-100 ">
       <div class="row h-100 align-items-center justify-content-between">
-        <div class="col-4 bg-sec h-100 d-flex align-items-center" id="title-col" data-aos="fade-right" data-aos-duration="800">
-          <h1 class="fs-1 ps-3">Black and Yellow Friday</h1>
+        <div class="col-5 bg-sec h-100 d-flex align-items-center" id="title-col" 
+        {{-- data-aos="fade-right" data-aos-duration="800" --}}
+        >
+          <h1 class="fs-1 ps-3 ms-5" id="textSlide">Black and Yellow Friday</h1>
           </div>
         
         <div class="col-7 justify-content-center">

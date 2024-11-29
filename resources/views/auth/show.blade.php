@@ -3,8 +3,7 @@
         <div class="row text-center align-items-center justify-content-center">
             <div class="col-12" class="d-flex ">
                 <h2>
-                    <span id="saluto" class="">
-                    </span>
+                    <span id="saluto"></span>
                     <span>{{Auth::user()->name}}</span>
                 </h2>
                 <div class="row align-items-start">

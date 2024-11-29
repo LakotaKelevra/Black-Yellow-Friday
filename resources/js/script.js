@@ -3,22 +3,22 @@ let reviewRates = document.querySelectorAll(".review-rate");
 let countDownDate = new Date("Nov 29, 2024 00:00:00").getTime();
 
 let x = setInterval(function() {
-  var now = new Date().getTime();
-  var distance = countDownDate - now;
+  let now = new Date().getTime();
+  let distance = countDownDate - now;
 
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24)).toLocaleString('en-US', {
+  let days = Math.floor(distance / (1000 * 60 * 60 * 24)).toLocaleString('en-US', {
     minimumIntegerDigits: 2,
     useGrouping: false
   });
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toLocaleString('en-US', {
+  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toLocaleString('en-US', {
     minimumIntegerDigits: 2,
     useGrouping: false
   });
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toLocaleString('en-US', {
+  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toLocaleString('en-US', {
     minimumIntegerDigits: 2,
     useGrouping: false
   });
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000).toLocaleString('en-US', {
+  let seconds = Math.floor((distance % (1000 * 60)) / 1000).toLocaleString('en-US', {
     minimumIntegerDigits: 2,
     useGrouping: false
   });
@@ -56,7 +56,8 @@ function salutoInOrario() {
   return saluto;
 }
 
-document.getElementById("saluto").innerText = salutoInOrario();
+document.getElementById('saluto').innerText = salutoInOrario();
+
 
  function reviewRate(){
   
