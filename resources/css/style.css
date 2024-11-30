@@ -1,7 +1,7 @@
 :root{
     --main: white;
     --sec: black;
-    --acc: #feed00;
+    --acc: rgb(254, 237, 0);
 }
 
 body{
@@ -21,9 +21,9 @@ h3, h4{
 
 main{
   /* background-image: linear-gradient(0deg, rgba(254,237,0,1) 0%, rgba(0,0,0,0.7) 100%), url('../../public/Background/360_F_242196688_e2a8ysUHFL6cfBlFk2kCf3OlhHKK9tce.jpg'); */
-  background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(254,237,0,0.49352240896358546) 26%, rgba(254,237,0,0) 50%, rgba(254,237,0,0.510329131652661) 73%, rgba(0,0,0,1) 100%);
-  background-size: cover;
+  background-color: var(--sec);
   padding-bottom: 20px;
+  
 }
 
 .margin-nav{
@@ -65,6 +65,7 @@ main{
 
   .card-body, .card {
     border: none;
+    border-radius: 15px;
   }
 
   .review-card{
@@ -99,4 +100,10 @@ main{
 
 .text-cart> a{
   color: var(--sec);
+}
+
+.product-row{
+  background-color: var(--main);
+  padding: 5% 10%;
+  border-radius: 10px;
 }

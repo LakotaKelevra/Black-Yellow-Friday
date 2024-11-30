@@ -79,10 +79,13 @@
               <a href="#!" class="text-reset">Landing Page</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">CRUD Prodotti</a>
+              <a href="#!" class="text-reset">Prodotti</a>
             </p>
             <p>
               <a href="#!" class="text-reset">Recensioni</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Carrello dinamico</a>
             </p>
             {{-- <p>
               <a href="#!" class="text-reset">Help</a>

@@ -17,6 +17,7 @@ footer{
 
 }
 
+
 nav> .shadow{
     box-shadow: var(--acc) !important;
 }
@@ -29,4 +30,49 @@ nav> .shadow{
     box-shadow: none;
     border: none;
     color: var(--acc);
+}
+
+.dropdown-menu{
+    border: none;
+    border-radius: 0px;
+    background-color: var(--acc);
+    padding: 0px;
+    /* box-shadow: 4px 4px var(--sec); */
+}
+
+.dropdown-item:hover{
+    border: none;
+    border-radius: 0px;
+    background-color: var(--sec);
+    color: var(--acc);  
+}
+
+.bi-cart2 {
+    /* position: relative; */
+    /* transform: translate(-50%, -50%); */
+    font-size: x-large;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    color: darkgray;
+}
+
+.bi-cart2:hover{
+    color: var(--acc);
+}   
+
+#cartBadge {
+    /* position: absolute; */
+    /* top: 20px;
+    right: -50px; */
+    transform: translate(-70%, -70%);
+    background-color: var(--acc);
+    color: var(--sec);
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 3px 6px;
+    /* display: none; */
+    min-width: 15px;
+    min-height: 15px;
+    text-align: center;
 }

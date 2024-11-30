@@ -106,6 +106,7 @@ class ProductController extends Controller implements HasMiddleware
      */
     public function destroy(product $product)
     {
-        //
+        $product->delete();
+        return redirect()->back()->with('success', 'Prodotto eliminato con successo');
     }
 }

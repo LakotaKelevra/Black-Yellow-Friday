@@ -37,6 +37,20 @@ class BuyerController extends Controller
         $buyer->products()->detach($product->id);
         return redirect()->back()->with('success', 'Prodotto rimosso dal carrello');
     }
+
+    public function cart()
+    {
+
+        $user = Auth::user();
+        $products_in_cart = $user->buyer->products()->get();
+        $quantity = $user->buyer->products()->count();
+        $total = 0;
+        foreach ($products_in_cart as $product) {
+            $final_price = $product->price - ($product->price * $product->discount / 100);
+            $total += $final_price;
+        }
+        return view('auth.cart', compact('user', 'products_in_cart', 'quantity', 'total'));
+    }
     public function index()
     {
         //

@@ -22,7 +22,7 @@
                     </div>
                     <button type="submit" class="btn btn-yellow mb-3">Registrati</button>
                 </form>
-                <p  class="text-center">Hai già un account? <a href="{{route('login')}}">Accedi</a></p>
+                <p  class="text-center text-white">Hai già un account? <a href="{{route('login')}}">Accedi</a></p>
             </div>
         </div>
     </div>

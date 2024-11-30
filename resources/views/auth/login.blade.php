@@ -14,7 +14,7 @@
                     </div>
                     <button type="submit" class="btn btn-yellow mb-3">Accedi</button>
                 </form>
-                <p class="text-center">Non hai un account? <a href="{{route('register')}}">Registrati</a></p>
+                <p class="text-center text-white">Non hai un account? <a href="{{route('register')}}">Registrati</a></p>
             </div>
         </div>
     </div>

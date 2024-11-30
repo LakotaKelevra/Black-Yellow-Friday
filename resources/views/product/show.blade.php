@@ -1,6 +1,6 @@
 <x-layout>
     <div class="container">
-        <div class="row">
+        <div class="row product-row">
             <h1 class="text-center my-4">{{$product->name}}</h1>
             <div class="col-6 p-3 my-3">
                 <img src="{{Storage::url($product->image)}}" alt="{{$product->name}}" class="img-fluid">
